@@ -1,6 +1,9 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+// DB connect
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://root:root@ds261128.mlab.com:61128/philharmony-booking');
 
 // configure app to use bodyParser()
 app.use(bodyParser.urlencoded({extended: true}));

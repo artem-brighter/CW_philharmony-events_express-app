@@ -3,7 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 // DB connect
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://root:root@ds261128.mlab.com:61128/philharmony-booking');
+mongoose.connect('mongodb://root:root@ds261745.mlab.com:61745/cherkasy-philharmony');
 
 // configure app to use bodyParser()
 app.use(bodyParser.urlencoded({extended: true}));

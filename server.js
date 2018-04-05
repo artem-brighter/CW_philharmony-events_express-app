@@ -44,6 +44,14 @@ router.route('/events')
             res.json(events);
         });
     });
+
+router.route('/events/future')
+    .get(function (req, res) {
+        Event.find({"start": {"$gte": new Date()}}, function (err, events) {
+            if (err)
+                res.send(err);
+
+            res.json(events);
         });
     });
 

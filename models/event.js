@@ -13,6 +13,9 @@ var EventSchema = new Schema({
     finish: {
         type: Date,
         required: true
+    },
+    description: {
+        type: String
     }
 });
 

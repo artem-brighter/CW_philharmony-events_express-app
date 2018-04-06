@@ -28,6 +28,7 @@ router.route('/events')
         event.name = req.body.name;
         event.start = new Date(req.body.start);
         event.finish = new Date(req.body.finish);
+        event.description = req.body.description;
 
         event.save(function (err) {
             if (err)
@@ -71,6 +72,7 @@ router.route('/events/:event_id')
             event.name = req.body.name;
             event.start = new Date(req.body.start);
             event.finish = new Date(req.body.finish);
+            event.description = req.body.description;
 
             event.save(function (err) {
                 if (err)
